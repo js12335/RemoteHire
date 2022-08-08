@@ -1,6 +1,4 @@
 import React from 'react'
-import Signup from '../LoginAndSignupPages/Signup'
-import Login from '../LoginAndSignupPages/Login'
 import {
   BrowserRouter as Router,
   Routes,
@@ -10,15 +8,11 @@ import {
   Outlet,
   Navigate,
 } from "react-router-dom";
-import Header from '../Components/UserComponents/Header';
-import UserHomePage from '../UserPages/UserHomePage';
-import AppliedJobs from '../UserPages/AppliedJobs';
-import Apply from '../UserPages/Apply';
-import Profile from '../UserPages/Profile';
 import DisplayJob from '../HRPages/DisplayJob';
 import Updatejob from '../HRPages/Updatejob';
 import AddJobs from '../HRPages/AddJobs';
-import HrPrivateRoute from '../LoginAndSignupPages/HrPrivate';
+import UserApplied from '../HRPages/UserApplied';
+import Status from '../HRPages/Status';
 
 export default function HrRouting() {
   const value1 = "http://localhost:8080/";
@@ -32,7 +26,8 @@ export default function HrRouting() {
         <Route path="/hr/addjob" exact element={<AddJobs />} />
         <Route path="/display" excat element={<DisplayJob/>}/>
         <Route path="display/:id/" excat element={<Updatejob/>}/>
-        
+        <Route path="/user/applied" exact element={<UserApplied/>}/>
+        <Route path="/user/applied/:id/:emails/" exact element={<Status/>}/>
        
         </Route>
         </Routes>

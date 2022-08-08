@@ -48,6 +48,7 @@ function AddJobs() {
             body: JSON.stringify(values),
           }).then(() => {
             console.log("Saved");
+            
           });
         
       onSubmitProps.resetForm();
